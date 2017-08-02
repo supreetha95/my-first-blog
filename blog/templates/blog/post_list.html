@@ -1,7 +1,9 @@
+{% load staticfiles %}
 <html>
     <head>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <title>Supreetha's Blog</title>
     </head>
     <body>
@@ -11,7 +13,7 @@
       {% for post in posts %}
         <div>
             <p>published: {{ post.published_date }}</p>
-            <hi><a href="">{{ post.title }}</a></h1>
+            <h1><a href="">{{ post.title }}</a></h1>
               <p>{{ post.text|linebreaksbr }}</p>
 
         </div>
